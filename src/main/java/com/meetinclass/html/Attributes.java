@@ -1,17 +1,20 @@
 package com.meetinclass.html;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
 public class Attributes {
 
-    List<Attribute> attributes;
+    final List<Attribute> attributes;
 
-    Attributes(Attribute... attributes) {
-        this.attributes = Stream.of(attributes).filter(Objects::nonNull).toList();
+    private Attributes(List<Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
+    static Attributes of(Attribute... attributes) {
+        return new Attributes(Stream.of(attributes).filter(Objects::nonNull).toList());
     }
 
     Attributes withClassName(String className) {
@@ -21,7 +24,6 @@ public class Attributes {
         var attrs = new ArrayList<Attribute>();
         attrs.add(new Attribute("class", className));
         attrs.addAll(attributes);
-        this.attributes = attrs;
-        return this;
+        return new Attributes(attrs);
     }
 }

@@ -5,7 +5,7 @@ import java.lang.String;
 
 public interface AttributeFactory {
     static Attributes attr(Attribute... attributes) {
-        return new Attributes(attributes);
+        return Attributes.of(attributes);
     }
 
     static Attribute _attr(String name, String value) {

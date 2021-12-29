@@ -35,7 +35,7 @@ public class HtmlDslGenerator {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, NoSuchMethodException {
         if (args.length != 1)
             throw new RuntimeException("Unexpected destination path for the class to be generated: " + Arrays.asList(args));
         var targetPath = Path.of(args[0]);
@@ -105,7 +105,7 @@ public class HtmlDslGenerator {
                 .returns(Attributes.class)
                 .addParameter(Attribute[].class, "attributes")
                 .varargs(true)
-                .addStatement("return new $T(attributes)", Attributes.class)
+                .addStatement("return $T.of(attributes)", Attributes.class)
                 .build());
         attributeFactory.addMethod(MethodSpec.methodBuilder("_attr")
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)

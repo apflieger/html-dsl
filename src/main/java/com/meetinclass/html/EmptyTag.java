@@ -13,11 +13,11 @@ class EmptyTag extends Node {
     }
 
     EmptyTag(String tagName) {
-        this(tagName, new Attributes());
+        this(tagName, Attributes.of());
     }
 
     EmptyTag(String tagName, String className) {
-        this(tagName, new Attributes().withClassName(className));
+        this(tagName, Attributes.of().withClassName(className));
     }
 
     EmptyTag(String tagName, String className, Attributes attributes) {

@@ -19,19 +19,19 @@ class ContainerTag extends Node {
     }
 
     ContainerTag(String tagName) {
-        this(tagName, new Attributes(), Stream.of());
+        this(tagName, Attributes.of(), Stream.of());
     }
 
     ContainerTag(String tagName, String text) {
-        this(tagName, new Attributes(), Stream.of(new TextNode(text)));
+        this(tagName, Attributes.of(), Stream.of(new TextNode(text)));
     }
 
     ContainerTag(String tagName, Node[] nodes) {
-        this(tagName, new Attributes(), Stream.of(nodes));
+        this(tagName, Attributes.of(), Stream.of(nodes));
     }
 
     ContainerTag(String tagName, Stream<Node> nodes) {
-        this(tagName, new Attributes(), nodes);
+        this(tagName, Attributes.of(), nodes);
     }
 
     ContainerTag(String tagName, Attributes attributes) {
@@ -47,15 +47,15 @@ class ContainerTag extends Node {
     }
     
     ContainerTag(String tagName, String className, String text) {
-        this(tagName, new Attributes().withClassName(className), Stream.of(new TextNode(text)));
+        this(tagName, Attributes.of().withClassName(className), Stream.of(new TextNode(text)));
     }
 
     ContainerTag(String tagName, String className, Node[] nodes) {
-        this(tagName, new Attributes().withClassName(className), Stream.of(nodes));
+        this(tagName, Attributes.of().withClassName(className), Stream.of(nodes));
     }
 
     ContainerTag(String tagName, String className, Stream<Node> nodes) {
-        this(tagName, new Attributes().withClassName(className), nodes);
+        this(tagName, Attributes.of().withClassName(className), nodes);
     }
 
     ContainerTag(String tagName, String className, Attributes attributes) {
