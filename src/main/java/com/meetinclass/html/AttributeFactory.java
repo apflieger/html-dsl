@@ -1,5 +1,6 @@
 package com.meetinclass.html;
 
+import com.meetinclass.html.color.NamedColor;
 import java.lang.IllegalArgumentException;
 import java.lang.String;
 
@@ -8,6 +9,7 @@ public interface AttributeFactory {
         return Attributes.of(attributes);
     }
 
+    @NamedColor("html-dsl-attribute")
     static Attribute _attr(String name, String value) {
         if (TagsAndAttributes.ATTRIBUTES.contains(name)) {
             throw new IllegalArgumentException("Illegal use of _attr(\"%s\"). Use _%s() instead".formatted(name, name));
@@ -15,7 +17,8 @@ public interface AttributeFactory {
         return new Attribute(name, value);
     }
 
-    static Attribute _accept(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _accept(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("accept", value);
     }
 
@@ -23,7 +26,8 @@ public interface AttributeFactory {
         return new Attribute("accept", null);
     }
 
-    static Attribute _acceptCharset(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _acceptCharset(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("accept-charset", value);
     }
 
@@ -31,7 +35,8 @@ public interface AttributeFactory {
         return new Attribute("accept-charset", null);
     }
 
-    static Attribute _accesskey(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _accesskey(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("accesskey", value);
     }
 
@@ -39,7 +44,8 @@ public interface AttributeFactory {
         return new Attribute("accesskey", null);
     }
 
-    static Attribute _action(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _action(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("action", value);
     }
 
@@ -47,7 +53,8 @@ public interface AttributeFactory {
         return new Attribute("action", null);
     }
 
-    static Attribute _align(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _align(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("align", value);
     }
 
@@ -55,7 +62,8 @@ public interface AttributeFactory {
         return new Attribute("align", null);
     }
 
-    static Attribute _alt(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _alt(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("alt", value);
     }
 
@@ -63,7 +71,8 @@ public interface AttributeFactory {
         return new Attribute("alt", null);
     }
 
-    static Attribute _async(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _async(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("async", value);
     }
 
@@ -71,7 +80,8 @@ public interface AttributeFactory {
         return new Attribute("async", null);
     }
 
-    static Attribute _autocomplete(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _autocomplete(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("autocomplete", value);
     }
 
@@ -79,7 +89,8 @@ public interface AttributeFactory {
         return new Attribute("autocomplete", null);
     }
 
-    static Attribute _autofocus(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _autofocus(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("autofocus", value);
     }
 
@@ -87,7 +98,8 @@ public interface AttributeFactory {
         return new Attribute("autofocus", null);
     }
 
-    static Attribute _autoplay(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _autoplay(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("autoplay", value);
     }
 
@@ -95,7 +107,8 @@ public interface AttributeFactory {
         return new Attribute("autoplay", null);
     }
 
-    static Attribute _autosave(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _autosave(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("autosave", value);
     }
 
@@ -103,7 +116,8 @@ public interface AttributeFactory {
         return new Attribute("autosave", null);
     }
 
-    static Attribute _border(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _border(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("border", value);
     }
 
@@ -111,7 +125,8 @@ public interface AttributeFactory {
         return new Attribute("border", null);
     }
 
-    static Attribute _buffered(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _buffered(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("buffered", value);
     }
 
@@ -119,7 +134,8 @@ public interface AttributeFactory {
         return new Attribute("buffered", null);
     }
 
-    static Attribute _challenge(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _challenge(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("challenge", value);
     }
 
@@ -127,7 +143,8 @@ public interface AttributeFactory {
         return new Attribute("challenge", null);
     }
 
-    static Attribute _charset(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _charset(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("charset", value);
     }
 
@@ -135,7 +152,8 @@ public interface AttributeFactory {
         return new Attribute("charset", null);
     }
 
-    static Attribute _checked(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _checked(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("checked", value);
     }
 
@@ -143,7 +161,8 @@ public interface AttributeFactory {
         return new Attribute("checked", null);
     }
 
-    static Attribute _cite(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _cite(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("cite", value);
     }
 
@@ -151,7 +170,8 @@ public interface AttributeFactory {
         return new Attribute("cite", null);
     }
 
-    static Attribute _color(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _color(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("color", value);
     }
 
@@ -159,7 +179,8 @@ public interface AttributeFactory {
         return new Attribute("color", null);
     }
 
-    static Attribute _cols(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _cols(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("cols", value);
     }
 
@@ -167,7 +188,8 @@ public interface AttributeFactory {
         return new Attribute("cols", null);
     }
 
-    static Attribute _colspan(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _colspan(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("colspan", value);
     }
 
@@ -175,7 +197,8 @@ public interface AttributeFactory {
         return new Attribute("colspan", null);
     }
 
-    static Attribute _content(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _content(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("content", value);
     }
 
@@ -183,7 +206,8 @@ public interface AttributeFactory {
         return new Attribute("content", null);
     }
 
-    static Attribute _contenteditable(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _contenteditable(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("contenteditable", value);
     }
 
@@ -191,7 +215,8 @@ public interface AttributeFactory {
         return new Attribute("contenteditable", null);
     }
 
-    static Attribute _contextmenu(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _contextmenu(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("contextmenu", value);
     }
 
@@ -199,7 +224,8 @@ public interface AttributeFactory {
         return new Attribute("contextmenu", null);
     }
 
-    static Attribute _controls(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _controls(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("controls", value);
     }
 
@@ -207,7 +233,8 @@ public interface AttributeFactory {
         return new Attribute("controls", null);
     }
 
-    static Attribute _coords(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _coords(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("coords", value);
     }
 
@@ -215,7 +242,8 @@ public interface AttributeFactory {
         return new Attribute("coords", null);
     }
 
-    static Attribute _data(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _data(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("data", value);
     }
 
@@ -223,7 +251,8 @@ public interface AttributeFactory {
         return new Attribute("data", null);
     }
 
-    static Attribute _datetime(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _datetime(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("datetime", value);
     }
 
@@ -231,7 +260,8 @@ public interface AttributeFactory {
         return new Attribute("datetime", null);
     }
 
-    static Attribute _default(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _default(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("default", value);
     }
 
@@ -239,7 +269,8 @@ public interface AttributeFactory {
         return new Attribute("default", null);
     }
 
-    static Attribute _defer(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _defer(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("defer", value);
     }
 
@@ -247,7 +278,8 @@ public interface AttributeFactory {
         return new Attribute("defer", null);
     }
 
-    static Attribute _dir(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _dir(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("dir", value);
     }
 
@@ -255,7 +287,8 @@ public interface AttributeFactory {
         return new Attribute("dir", null);
     }
 
-    static Attribute _dirname(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _dirname(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("dirname", value);
     }
 
@@ -263,7 +296,8 @@ public interface AttributeFactory {
         return new Attribute("dirname", null);
     }
 
-    static Attribute _disabled(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _disabled(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("disabled", value);
     }
 
@@ -271,7 +305,8 @@ public interface AttributeFactory {
         return new Attribute("disabled", null);
     }
 
-    static Attribute _download(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _download(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("download", value);
     }
 
@@ -279,7 +314,8 @@ public interface AttributeFactory {
         return new Attribute("download", null);
     }
 
-    static Attribute _draggable(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _draggable(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("draggable", value);
     }
 
@@ -287,7 +323,8 @@ public interface AttributeFactory {
         return new Attribute("draggable", null);
     }
 
-    static Attribute _dropzone(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _dropzone(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("dropzone", value);
     }
 
@@ -295,7 +332,8 @@ public interface AttributeFactory {
         return new Attribute("dropzone", null);
     }
 
-    static Attribute _enctype(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _enctype(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("enctype", value);
     }
 
@@ -303,7 +341,8 @@ public interface AttributeFactory {
         return new Attribute("enctype", null);
     }
 
-    static Attribute _for(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _for(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("for", value);
     }
 
@@ -311,7 +350,8 @@ public interface AttributeFactory {
         return new Attribute("for", null);
     }
 
-    static Attribute _form(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _form(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("form", value);
     }
 
@@ -319,7 +359,8 @@ public interface AttributeFactory {
         return new Attribute("form", null);
     }
 
-    static Attribute _formaction(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _formaction(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("formaction", value);
     }
 
@@ -327,7 +368,8 @@ public interface AttributeFactory {
         return new Attribute("formaction", null);
     }
 
-    static Attribute _headers(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _headers(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("headers", value);
     }
 
@@ -335,7 +377,8 @@ public interface AttributeFactory {
         return new Attribute("headers", null);
     }
 
-    static Attribute _height(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _height(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("height", value);
     }
 
@@ -343,7 +386,8 @@ public interface AttributeFactory {
         return new Attribute("height", null);
     }
 
-    static Attribute _hidden(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _hidden(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("hidden", value);
     }
 
@@ -351,7 +395,8 @@ public interface AttributeFactory {
         return new Attribute("hidden", null);
     }
 
-    static Attribute _high(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _high(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("high", value);
     }
 
@@ -359,7 +404,8 @@ public interface AttributeFactory {
         return new Attribute("high", null);
     }
 
-    static Attribute _href(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _href(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("href", value);
     }
 
@@ -367,7 +413,8 @@ public interface AttributeFactory {
         return new Attribute("href", null);
     }
 
-    static Attribute _hreflang(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _hreflang(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("hreflang", value);
     }
 
@@ -375,7 +422,8 @@ public interface AttributeFactory {
         return new Attribute("hreflang", null);
     }
 
-    static Attribute _httpEquiv(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _httpEquiv(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("http-equiv", value);
     }
 
@@ -383,7 +431,8 @@ public interface AttributeFactory {
         return new Attribute("http-equiv", null);
     }
 
-    static Attribute _icon(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _icon(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("icon", value);
     }
 
@@ -391,7 +440,8 @@ public interface AttributeFactory {
         return new Attribute("icon", null);
     }
 
-    static Attribute _id(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _id(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("id", value);
     }
 
@@ -399,7 +449,8 @@ public interface AttributeFactory {
         return new Attribute("id", null);
     }
 
-    static Attribute _ismap(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _ismap(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("ismap", value);
     }
 
@@ -407,7 +458,8 @@ public interface AttributeFactory {
         return new Attribute("ismap", null);
     }
 
-    static Attribute _itemprop(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _itemprop(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("itemprop", value);
     }
 
@@ -415,7 +467,8 @@ public interface AttributeFactory {
         return new Attribute("itemprop", null);
     }
 
-    static Attribute _keytype(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _keytype(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("keytype", value);
     }
 
@@ -423,7 +476,8 @@ public interface AttributeFactory {
         return new Attribute("keytype", null);
     }
 
-    static Attribute _kind(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _kind(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("kind", value);
     }
 
@@ -431,7 +485,8 @@ public interface AttributeFactory {
         return new Attribute("kind", null);
     }
 
-    static Attribute _label(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _label(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("label", value);
     }
 
@@ -439,7 +494,8 @@ public interface AttributeFactory {
         return new Attribute("label", null);
     }
 
-    static Attribute _lang(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _lang(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("lang", value);
     }
 
@@ -447,7 +503,8 @@ public interface AttributeFactory {
         return new Attribute("lang", null);
     }
 
-    static Attribute _language(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _language(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("language", value);
     }
 
@@ -455,7 +512,8 @@ public interface AttributeFactory {
         return new Attribute("language", null);
     }
 
-    static Attribute _list(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _list(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("list", value);
     }
 
@@ -463,7 +521,8 @@ public interface AttributeFactory {
         return new Attribute("list", null);
     }
 
-    static Attribute _loop(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _loop(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("loop", value);
     }
 
@@ -471,7 +530,8 @@ public interface AttributeFactory {
         return new Attribute("loop", null);
     }
 
-    static Attribute _low(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _low(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("low", value);
     }
 
@@ -479,7 +539,8 @@ public interface AttributeFactory {
         return new Attribute("low", null);
     }
 
-    static Attribute _manifest(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _manifest(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("manifest", value);
     }
 
@@ -487,7 +548,8 @@ public interface AttributeFactory {
         return new Attribute("manifest", null);
     }
 
-    static Attribute _max(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _max(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("max", value);
     }
 
@@ -495,7 +557,8 @@ public interface AttributeFactory {
         return new Attribute("max", null);
     }
 
-    static Attribute _maxlength(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _maxlength(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("maxlength", value);
     }
 
@@ -503,7 +566,8 @@ public interface AttributeFactory {
         return new Attribute("maxlength", null);
     }
 
-    static Attribute _media(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _media(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("media", value);
     }
 
@@ -511,7 +575,8 @@ public interface AttributeFactory {
         return new Attribute("media", null);
     }
 
-    static Attribute _method(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _method(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("method", value);
     }
 
@@ -519,7 +584,8 @@ public interface AttributeFactory {
         return new Attribute("method", null);
     }
 
-    static Attribute _min(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _min(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("min", value);
     }
 
@@ -527,7 +593,8 @@ public interface AttributeFactory {
         return new Attribute("min", null);
     }
 
-    static Attribute _multiple(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _multiple(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("multiple", value);
     }
 
@@ -535,7 +602,8 @@ public interface AttributeFactory {
         return new Attribute("multiple", null);
     }
 
-    static Attribute _name(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _name(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("name", value);
     }
 
@@ -543,7 +611,8 @@ public interface AttributeFactory {
         return new Attribute("name", null);
     }
 
-    static Attribute _novalidate(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _novalidate(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("novalidate", value);
     }
 
@@ -551,7 +620,8 @@ public interface AttributeFactory {
         return new Attribute("novalidate", null);
     }
 
-    static Attribute _open(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _open(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("open", value);
     }
 
@@ -559,7 +629,8 @@ public interface AttributeFactory {
         return new Attribute("open", null);
     }
 
-    static Attribute _optimum(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _optimum(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("optimum", value);
     }
 
@@ -567,7 +638,8 @@ public interface AttributeFactory {
         return new Attribute("optimum", null);
     }
 
-    static Attribute _pattern(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _pattern(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("pattern", value);
     }
 
@@ -575,7 +647,8 @@ public interface AttributeFactory {
         return new Attribute("pattern", null);
     }
 
-    static Attribute _ping(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _ping(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("ping", value);
     }
 
@@ -583,7 +656,8 @@ public interface AttributeFactory {
         return new Attribute("ping", null);
     }
 
-    static Attribute _placeholder(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _placeholder(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("placeholder", value);
     }
 
@@ -591,7 +665,8 @@ public interface AttributeFactory {
         return new Attribute("placeholder", null);
     }
 
-    static Attribute _poster(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _poster(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("poster", value);
     }
 
@@ -599,7 +674,8 @@ public interface AttributeFactory {
         return new Attribute("poster", null);
     }
 
-    static Attribute _preload(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _preload(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("preload", value);
     }
 
@@ -607,7 +683,8 @@ public interface AttributeFactory {
         return new Attribute("preload", null);
     }
 
-    static Attribute _pubdate(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _pubdate(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("pubdate", value);
     }
 
@@ -615,7 +692,8 @@ public interface AttributeFactory {
         return new Attribute("pubdate", null);
     }
 
-    static Attribute _radiogroup(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _radiogroup(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("radiogroup", value);
     }
 
@@ -623,7 +701,8 @@ public interface AttributeFactory {
         return new Attribute("radiogroup", null);
     }
 
-    static Attribute _readonly(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _readonly(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("readonly", value);
     }
 
@@ -631,7 +710,8 @@ public interface AttributeFactory {
         return new Attribute("readonly", null);
     }
 
-    static Attribute _rel(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _rel(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("rel", value);
     }
 
@@ -639,7 +719,8 @@ public interface AttributeFactory {
         return new Attribute("rel", null);
     }
 
-    static Attribute _required(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _required(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("required", value);
     }
 
@@ -647,7 +728,8 @@ public interface AttributeFactory {
         return new Attribute("required", null);
     }
 
-    static Attribute _reversed(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _reversed(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("reversed", value);
     }
 
@@ -655,7 +737,8 @@ public interface AttributeFactory {
         return new Attribute("reversed", null);
     }
 
-    static Attribute _role(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _role(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("role", value);
     }
 
@@ -663,7 +746,8 @@ public interface AttributeFactory {
         return new Attribute("role", null);
     }
 
-    static Attribute _rows(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _rows(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("rows", value);
     }
 
@@ -671,7 +755,8 @@ public interface AttributeFactory {
         return new Attribute("rows", null);
     }
 
-    static Attribute _rowspan(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _rowspan(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("rowspan", value);
     }
 
@@ -679,7 +764,8 @@ public interface AttributeFactory {
         return new Attribute("rowspan", null);
     }
 
-    static Attribute _sandbox(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _sandbox(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("sandbox", value);
     }
 
@@ -687,7 +773,8 @@ public interface AttributeFactory {
         return new Attribute("sandbox", null);
     }
 
-    static Attribute _scope(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _scope(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("scope", value);
     }
 
@@ -695,7 +782,8 @@ public interface AttributeFactory {
         return new Attribute("scope", null);
     }
 
-    static Attribute _scoped(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _scoped(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("scoped", value);
     }
 
@@ -703,7 +791,8 @@ public interface AttributeFactory {
         return new Attribute("scoped", null);
     }
 
-    static Attribute _seamless(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _seamless(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("seamless", value);
     }
 
@@ -711,7 +800,8 @@ public interface AttributeFactory {
         return new Attribute("seamless", null);
     }
 
-    static Attribute _selected(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _selected(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("selected", value);
     }
 
@@ -719,7 +809,8 @@ public interface AttributeFactory {
         return new Attribute("selected", null);
     }
 
-    static Attribute _shape(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _shape(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("shape", value);
     }
 
@@ -727,7 +818,8 @@ public interface AttributeFactory {
         return new Attribute("shape", null);
     }
 
-    static Attribute _size(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _size(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("size", value);
     }
 
@@ -735,7 +827,8 @@ public interface AttributeFactory {
         return new Attribute("size", null);
     }
 
-    static Attribute _sizes(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _sizes(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("sizes", value);
     }
 
@@ -743,7 +836,8 @@ public interface AttributeFactory {
         return new Attribute("sizes", null);
     }
 
-    static Attribute _span(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _span(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("span", value);
     }
 
@@ -751,7 +845,8 @@ public interface AttributeFactory {
         return new Attribute("span", null);
     }
 
-    static Attribute _spellcheck(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _spellcheck(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("spellcheck", value);
     }
 
@@ -759,7 +854,8 @@ public interface AttributeFactory {
         return new Attribute("spellcheck", null);
     }
 
-    static Attribute _src(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _src(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("src", value);
     }
 
@@ -767,7 +863,8 @@ public interface AttributeFactory {
         return new Attribute("src", null);
     }
 
-    static Attribute _srcdoc(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _srcdoc(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("srcdoc", value);
     }
 
@@ -775,7 +872,8 @@ public interface AttributeFactory {
         return new Attribute("srcdoc", null);
     }
 
-    static Attribute _srclang(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _srclang(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("srclang", value);
     }
 
@@ -783,7 +881,8 @@ public interface AttributeFactory {
         return new Attribute("srclang", null);
     }
 
-    static Attribute _srcset(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _srcset(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("srcset", value);
     }
 
@@ -791,7 +890,8 @@ public interface AttributeFactory {
         return new Attribute("srcset", null);
     }
 
-    static Attribute _start(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _start(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("start", value);
     }
 
@@ -799,7 +899,8 @@ public interface AttributeFactory {
         return new Attribute("start", null);
     }
 
-    static Attribute _step(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _step(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("step", value);
     }
 
@@ -807,7 +908,8 @@ public interface AttributeFactory {
         return new Attribute("step", null);
     }
 
-    static Attribute _style(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _style(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("style", value);
     }
 
@@ -815,7 +917,8 @@ public interface AttributeFactory {
         return new Attribute("style", null);
     }
 
-    static Attribute _summary(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _summary(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("summary", value);
     }
 
@@ -823,7 +926,8 @@ public interface AttributeFactory {
         return new Attribute("summary", null);
     }
 
-    static Attribute _tabindex(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _tabindex(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("tabindex", value);
     }
 
@@ -831,7 +935,8 @@ public interface AttributeFactory {
         return new Attribute("tabindex", null);
     }
 
-    static Attribute _target(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _target(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("target", value);
     }
 
@@ -839,7 +944,8 @@ public interface AttributeFactory {
         return new Attribute("target", null);
     }
 
-    static Attribute _title(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _title(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("title", value);
     }
 
@@ -847,7 +953,8 @@ public interface AttributeFactory {
         return new Attribute("title", null);
     }
 
-    static Attribute _type(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _type(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("type", value);
     }
 
@@ -855,7 +962,8 @@ public interface AttributeFactory {
         return new Attribute("type", null);
     }
 
-    static Attribute _usemap(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _usemap(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("usemap", value);
     }
 
@@ -863,7 +971,8 @@ public interface AttributeFactory {
         return new Attribute("usemap", null);
     }
 
-    static Attribute _value(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _value(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("value", value);
     }
 
@@ -871,7 +980,8 @@ public interface AttributeFactory {
         return new Attribute("value", null);
     }
 
-    static Attribute _width(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _width(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("width", value);
     }
 
@@ -879,7 +989,8 @@ public interface AttributeFactory {
         return new Attribute("width", null);
     }
 
-    static Attribute _wrap(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _wrap(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("wrap", value);
     }
 
@@ -887,7 +998,8 @@ public interface AttributeFactory {
         return new Attribute("wrap", null);
     }
 
-    static Attribute _translate(String value) {
+    @NamedColor("html-dsl-attribute")
+    static Attribute _translate(@NamedColor("html-dsl-attribute") String value) {
         return new Attribute("translate", value);
     }
 

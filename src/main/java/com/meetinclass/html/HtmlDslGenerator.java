@@ -11,6 +11,8 @@ import javax.lang.model.element.Modifier;
 import com.squareup.javapoet.*;
 import org.apache.commons.text.CaseUtils;
 
+import com.meetinclass.html.color.NamedColor;
+
 public class HtmlDslGenerator {
 
     enum Parameter {
@@ -42,18 +44,21 @@ public class HtmlDslGenerator {
         TypeSpec.Builder htmlFactory = TypeSpec.interfaceBuilder("HtmlFactory")
                 .addModifiers(Modifier.PUBLIC);
         htmlFactory.addMethod(MethodSpec.methodBuilder("text")
+                .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-tag").build())
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                 .returns(Node.class)
                 .addParameter(String.class, "text")
                 .addStatement("return new $T(text)", TextNode.class)
                 .build());
         htmlFactory.addMethod(MethodSpec.methodBuilder("rawHtml")
+                .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-tag").build())
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                 .returns(Node.class)
                 .addParameter(String.class, "html")
                 .addStatement("return new $T(html)", RawHtmlNode.class)
                 .build());
         htmlFactory.addMethod(MethodSpec.methodBuilder("each")
+                .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-tag").build())
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                 .returns(Node.class)
                 .addParameter(Node[].class, "nodes")
@@ -61,6 +66,7 @@ public class HtmlDslGenerator {
                 .addStatement("return new $T($T.of(nodes))", EachNode.class, Stream.class)
                 .build());
         htmlFactory.addMethod(MethodSpec.methodBuilder("each")
+                .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-tag").build())
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                 .returns(Node.class)
                 .addParameter(ParameterizedTypeName.get(Stream.class, Node.class), "nodes")
@@ -108,6 +114,7 @@ public class HtmlDslGenerator {
                 .addStatement("return $T.of(attributes)", Attributes.class)
                 .build());
         attributeFactory.addMethod(MethodSpec.methodBuilder("_attr")
+                .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-attribute").build())
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                 .returns(Attribute.class)
                 .addParameter(String.class, "name")
@@ -125,9 +132,10 @@ public class HtmlDslGenerator {
                     var methodName = "_" + CaseUtils.toCamelCase(attribute, false, '-');
                     return Stream.of(
                             MethodSpec.methodBuilder(methodName)
+                                    .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-attribute").build())
                                     .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                                     .returns(Attribute.class)
-                                    .addParameter(String.class, "value")
+                                    .addParameter(ParameterSpec.builder(String.class, "value").addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-attribute").build()).build())
                                     .addStatement("return new $T($S, value)", Attribute.class, attribute)
                                     .build(),
                             MethodSpec.methodBuilder(methodName)
@@ -146,6 +154,7 @@ public class HtmlDslGenerator {
 
     private static MethodSpec buildMethod(String tag, Type nodeType, Parameter... paramCombination) {
         return MethodSpec.methodBuilder(tag)
+                .addAnnotation(AnnotationSpec.builder(NamedColor.class).addMember("value", "$S", "html-dsl-tag").build())
                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                 .returns(Node.class)
                 .addParameters(Stream.of(paramCombination)
