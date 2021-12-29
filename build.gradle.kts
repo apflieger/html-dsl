@@ -16,7 +16,7 @@ repositories {
 dependencies {
     implementation("com.squareup:javapoet:1.13.0")
     implementation("org.apache.commons:commons-text:1.9")
-    implementation("com.meetinclass:annotation-in-html:0.0.1")
+    implementation("com.meetinclass.dslincolor:annotations:0.0.1")
 
     testImplementation("junit:junit:4.13.1")
     testImplementation("com.google.truth:truth:1.1")

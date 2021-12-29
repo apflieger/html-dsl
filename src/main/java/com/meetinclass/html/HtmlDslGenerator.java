@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.lang.model.element.Modifier;
 
+import com.meetinclass.dslincolor.annotations.NamedColor;
 import com.squareup.javapoet.*;
 import org.apache.commons.text.CaseUtils;
 
-import com.meetinclass.html.color.NamedColor;
 
 public class HtmlDslGenerator {
 

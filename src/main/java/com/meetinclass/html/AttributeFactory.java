@@ -1,6 +1,6 @@
 package com.meetinclass.html;
 
-import com.meetinclass.html.color.NamedColor;
+import com.meetinclass.dslincolor.annotations.NamedColor;
 import java.lang.IllegalArgumentException;
 import java.lang.String;
 
